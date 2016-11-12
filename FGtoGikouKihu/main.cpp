@@ -8,50 +8,50 @@
 <pre>
 1行目: <棋譜番号> <対局開始日> <先手名> <後手名> <勝敗(0:引き分け,1:先手勝ち,2:後手勝ち)> <手数> <棋戦> <戦型>
 2行目: <CSA形式の指し手(1手6文字)を一行に並べたもの>
- </pre>
+</pre>
 
- （floodgateの形式）
+（floodgateの形式）
 
- N+Gikou_i3_5010U
- N-SILENT_MAJORITY_i7-3517U
- 'Max_Moves:256
- 'Least_Time_Per_Move:0
- 'Increment:10
- $EVENT:wdoor+floodgate-600-10F+Gikou_i3_5010U+SILENT_MAJORITY_i7-3517U+20160629110002
- $START_TIME:2016/06/29 11:00:02
- P1-KY-KE-GI-KI-OU-KI-GI-KE-KY
- P2 * -HI *  *  *  *  * -KA *
- P3-FU-FU-FU-FU-FU-FU-FU-FU-FU
- P4 *  *  *  *  *  *  *  *  *
- P5 *  *  *  *  *  *  *  *  *
- P6 *  *  *  *  *  *  *  *  *
- P7+FU+FU+FU+FU+FU+FU+FU+FU+FU
- P8 * +KA *  *  *  *  * +HI *
- P9+KY+KE+GI+KI+OU+KI+GI+KE+KY
- +
- 'rating:Gikou_i3_5010U+84a8e60cfef7d11ce017595eea78c60d:SILENT_MAJORITY_i7-3517U+e900b38f1abb4c21681fe96a7e3277b4
- 'black_rate:Gikou_i3_5010U+84a8e60cfef7d11ce017595eea78c60d:3189.0
- 'white_rate:SILENT_MAJORITY_i7-3517U+e900b38f1abb4c21681fe96a7e3277b4:3215.0
- +7776FU
- T0
- '** 104
- -8384FU
- （ここに思考と指し手がずらっと並べられる。）
- %TORYO
- 'P1-KY *  *  *  *  *  * -OU-KY
- 'P2 *  *  *  *  *  *  * -FU *
- 'P3 *  *  * -GI * -FU-KI * -FU
- 'P4 *  *  *  *  *  * +FU+FU *
- 'P5-FU * +KI-GI-FU *  *  *  *
- 'P6 *  * +FU+FU+KA * -KE *  *
- 'P7+KY *  * -KE * +FU *  * +FU
- 'P8 *  * +GI-FU+FU *  * -KI+KY
- 'P9-RY+FU *  * +GI+OU-KI *  *
- 'P+00FU00FU00HI00KA00KE00KE
- 'P-00FU00FU
- '+
- 'summary:toryo:Gikou_i3_5010U lose:SILENT_MAJORITY_i7-3517U win
- '$END_TIME:2016/06/29 11:45:26
+N+Gikou_i3_5010U
+N-SILENT_MAJORITY_i7-3517U
+'Max_Moves:256
+'Least_Time_Per_Move:0
+'Increment:10
+$EVENT:wdoor+floodgate-600-10F+Gikou_i3_5010U+SILENT_MAJORITY_i7-3517U+20160629110002
+$START_TIME:2016/06/29 11:00:02
+P1-KY-KE-GI-KI-OU-KI-GI-KE-KY
+P2 * -HI *  *  *  *  * -KA *
+P3-FU-FU-FU-FU-FU-FU-FU-FU-FU
+P4 *  *  *  *  *  *  *  *  *
+P5 *  *  *  *  *  *  *  *  *
+P6 *  *  *  *  *  *  *  *  *
+P7+FU+FU+FU+FU+FU+FU+FU+FU+FU
+P8 * +KA *  *  *  *  * +HI *
+P9+KY+KE+GI+KI+OU+KI+GI+KE+KY
++
+'rating:Gikou_i3_5010U+84a8e60cfef7d11ce017595eea78c60d:SILENT_MAJORITY_i7-3517U+e900b38f1abb4c21681fe96a7e3277b4
+'black_rate:Gikou_i3_5010U+84a8e60cfef7d11ce017595eea78c60d:3189.0
+'white_rate:SILENT_MAJORITY_i7-3517U+e900b38f1abb4c21681fe96a7e3277b4:3215.0
++7776FU
+T0
+'** 104
+-8384FU
+（ここに思考と指し手がずらっと並べられる。）
+%TORYO
+'P1-KY *  *  *  *  *  * -OU-KY
+'P2 *  *  *  *  *  *  * -FU *
+'P3 *  *  * -GI * -FU-KI * -FU
+'P4 *  *  *  *  *  * +FU+FU *
+'P5-FU * +KI-GI-FU *  *  *  *
+'P6 *  * +FU+FU+KA * -KE *  *
+'P7+KY *  * -KE * +FU *  * +FU
+'P8 *  * +GI-FU+FU *  * -KI+KY
+'P9-RY+FU *  * +GI+OU-KI *  *
+'P+00FU00FU00HI00KA00KE00KE
+'P-00FU00FU
+'+
+'summary:toryo:Gikou_i3_5010U lose:SILENT_MAJORITY_i7-3517U win
+'$END_TIME:2016/06/29 11:45:26
 
 ================================================================================*/
 
@@ -76,9 +76,13 @@ namespace sys = std::tr2::sys;
 //"c:/book/"      
 //"C:/Users/daruma/Desktop/wdoor2015/TEST/"
 #define MAX_data 100000
-#define TEST
+//#define TEST
 
+#ifdef TEST
 #define TEST_outputfile  "C:/Users/daruma/Desktop/records.txt"  
+#else
+#define TEST_outputfile "records.txt"
+#endif
 //"c:/book/record.txt"
 //"C:/Users/daruma/Desktop/records.txt"  
 //"./records.txt"
@@ -97,6 +101,8 @@ int writed_games=0;
 //--------------------------------------------------------------------------------------
 void find_csa(const char *path, std::vector<filepath>& list_) {
 
+	std::cout << "csa file finding";
+
 	//まずはディレクトリ内で見つけたファイルの列挙
 	int filenum = 0;
 	sys::path p(path); // 列挙の起点
@@ -108,12 +114,13 @@ void find_csa(const char *path, std::vector<filepath>& list_) {
 		if (sys::is_regular_file(p)) { // ファイルなら...
 			//cout << path << p.filename() << endl;
 			if (p.filename().string().find("csa")!=string::npos) {
-				list_.push_back(path + p.filename().string());
-				//filenum++;
+				list_.push_back(p.string());
+				if (filenum++ % 50000 == 0)
+					std::cout << ".";
 			}
 		}
 	});
-	//cout <<"file number"<< filenum << endl;
+	cout <<"file number"<< filenum << endl;
 }
 
 //spaceを_に変えるための関数　（spaceはセパレーターなのでこう変換する）
@@ -158,7 +165,7 @@ int write_game_info(std::string filename,GameData GD) {
 	fstream fs;
 	//上書きモードにしないといけない
 	fs.open(filename, ios::app);
-	
+
 	//1行目
 	//<棋譜番号> <対局開始日> <先手名> <後手名> <勝敗(0:引き分け,1:先手勝ち,2:後手勝ち)> <手数> <棋戦> <戦型> (わからないところはすべて0にしてある。)
 	fs << GD.event<<" " << GD.day <<" "<< GD.black_name <<" "<< GD.white_name << " " <<GD.VorD<<" "<<GD.plys<<" 0"<<" 0"<< endl;
@@ -179,15 +186,22 @@ int read_game_info(std::vector<filepath>& list_) {
 
 	vector<string> lines;
 
+	cout << "writing";
+
+	int num = 0;
+
 	//string::npos;
 	for (auto filename : list_) {
+
+		if (num++ % 1000 == 0)
+			cout << ".";
 
 		if (
 			read_all_lines(filename, lines)
 			) {
 			cout << "read error" << endl; continue;
 		}//ここがおかしい！
-		//ここまでおｋ
+		 //ここまでおｋ
 
 		for (auto line : lines) {
 
@@ -234,7 +248,7 @@ int read_game_info(std::vector<filepath>& list_) {
 					|| line.find(":abnormal:") != string::npos
 					|| line.find(":illegal move:") != string::npos
 					|| line.find(":oute_sennichite:") != string::npos
-					) 
+					)
 				{
 					goto NO_WRITE;
 				}
@@ -260,7 +274,7 @@ int read_game_info(std::vector<filepath>& list_) {
 					}
 				}
 			}//end of summary
-			//moves
+			 //moves
 			else if (line[0] == '+' || line[0] == '-') {
 				string move_str = line.substr(1);
 				gd.moves.push_back(move_str);
@@ -276,7 +290,7 @@ int read_game_info(std::vector<filepath>& list_) {
 			write_game_info(string(TEST_outputfile), gd);
 			writed_games++;
 		}
-NO_WRITE:
+	NO_WRITE:
 		gd.clear();
 		lines.clear();
 	}//endof foreach list_
@@ -305,7 +319,7 @@ int main(int argc, char **argv) {
 
 #endif
 #ifndef TEST
-	if (argc < 1) useage(); exit(1);
+	if (argc <= 1) {useage(); exit(1);}
 
 	//string filepath_command=string(argv[1]);
 	find_csa(argv[1], pathlist);
