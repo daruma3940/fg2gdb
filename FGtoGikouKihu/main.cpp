@@ -244,7 +244,7 @@ int read_game_info(std::vector<filepath>& list_) {
 				if ((gd.plys<50&&line.find(":toryo:") != string::npos)
 					|| (gd.plys<50 && line.find(":kachi:") != string::npos)
 					|| (gd.plys<50 && line.find(":sennichite:") != string::npos)
-					|| (gd.plys<50 && line.find(":timeup:") != string::npos)
+					|| (gd.plys<50 && line.find(":time up:") != string::npos)
 					|| line.find(":abnormal:") != string::npos
 					|| line.find(":illegal move:") != string::npos
 					|| line.find(":oute_sennichite:") != string::npos
@@ -286,7 +286,7 @@ int read_game_info(std::vector<filepath>& list_) {
 
 		}//endof foreach line_
 
-		if (gd.black_rate != 0 && gd.white_rate != 0) {
+		if (gd.black_rate != 0 && gd.white_rate != 0 && gd.plys > 0) {
 			write_game_info(string(TEST_outputfile), gd);
 			writed_games++;
 		}
