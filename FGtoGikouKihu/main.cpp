@@ -235,7 +235,9 @@ int read_game_info(std::vector<filepath>& list_) {
 				int num = ret - str + 1;
 
 				gd.white_rate = std::stoi(line.substr(num));
-				_ASSERT(0<gd.white_rate&&gd.white_rate < 4000);
+				//Rは4000以下であるとしていたがelmoが出てきたのでこれではだめになってしまった(;^_^Aコンピュータ将棋の進歩は早いなぁ
+				//まあさすがに1万は超えないだろう...
+				_ASSERT(0<gd.white_rate&&gd.white_rate < 10000);
 				if (gd.white_rate < 2800) goto NO_WRITE;
 			}
 			else if (line.find("summary") != string::npos) {
