@@ -278,7 +278,7 @@ int read_game_info(std::vector<filepath>& list_) {
 			}//end of summary
 			 //moves
 			else if (line[0] == '+' || line[0] == '-') {
-				string move_str = line.substr(1);
+				string move_str = line.substr(1, 6);
 				gd.moves.push_back(move_str);
 				gd.plys++;
 				_ASSERT(gd.plys <= 257);
