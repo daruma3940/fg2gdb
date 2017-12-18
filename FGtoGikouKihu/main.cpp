@@ -1,16 +1,16 @@
 /*===============================================================================
 
-‚±‚Ìƒ\ƒtƒg‚Ífloodgate‚ÌŠû•ˆ‚ğ‹ZI‚ÅŠwK‚·‚é‚½‚ß‚ÌŒ`®‚É•ÏŠ·‚·‚é‚½‚ß‚Ì‚à‚Ì‚Å‚ ‚é
-QlFfggather
+ã“ã®ã‚½ãƒ•ãƒˆã¯floodgateã®æ£‹è­œã‚’æŠ€å·§ã§å­¦ç¿’ã™ã‚‹ãŸã‚ã®å½¢å¼ã«å¤‰æ›ã™ã‚‹ãŸã‚ã®ã‚‚ã®ã§ã‚ã‚‹
+å‚è€ƒï¼šfggather
 
 
-i‹ZI‚ÌŒ`®j
+ï¼ˆæŠ€å·§ã®å½¢å¼ï¼‰
 <pre>
-1s–Ú: <Šû•ˆ”Ô†> <‘Î‹ÇŠJn“ú> <æè–¼> <Œãè–¼> <Ÿ”s(0:ˆø‚«•ª‚¯,1:æèŸ‚¿,2:ŒãèŸ‚¿)> <è”> <Šûí> <íŒ^>
-2s–Ú: <CSAŒ`®‚Ìw‚µè(1è6•¶š)‚ğˆês‚É•À‚×‚½‚à‚Ì>
+1è¡Œç›®: <æ£‹è­œç•ªå·> <å¯¾å±€é–‹å§‹æ—¥> <å…ˆæ‰‹å> <å¾Œæ‰‹å> <å‹æ•—(0:å¼•ãåˆ†ã‘,1:å…ˆæ‰‹å‹ã¡,2:å¾Œæ‰‹å‹ã¡)> <æ‰‹æ•°> <æ£‹æˆ¦> <æˆ¦å‹>
+2è¡Œç›®: <CSAå½¢å¼ã®æŒ‡ã—æ‰‹(1æ‰‹6æ–‡å­—)ã‚’ä¸€è¡Œã«ä¸¦ã¹ãŸã‚‚ã®>
 </pre>
 
-ifloodgate‚ÌŒ`®j
+ï¼ˆfloodgateã®å½¢å¼ï¼‰
 
 N+Gikou_i3_5010U
 N-SILENT_MAJORITY_i7-3517U
@@ -36,7 +36,7 @@ P9+KY+KE+GI+KI+OU+KI+GI+KE+KY
 T0
 '** 104
 -8384FU
-i‚±‚±‚Évl‚Æw‚µè‚ª‚¸‚ç‚Á‚Æ•À‚×‚ç‚ê‚éBj
+ï¼ˆã“ã“ã«æ€è€ƒã¨æŒ‡ã—æ‰‹ãŒãšã‚‰ã£ã¨ä¸¦ã¹ã‚‰ã‚Œã‚‹ã€‚ï¼‰
 %TORYO
 'P1-KY *  *  *  *  *  * -OU-KY
 'P2 *  *  *  *  *  *  * -FU *
@@ -89,29 +89,29 @@ namespace sys = std::tr2::sys;
 
 
 typedef string filepath;
-std::vector<filepath> pathlist;//ƒtƒ@ƒCƒ‹ƒpƒX‚ÌƒŠƒXƒg
+std::vector<filepath> pathlist;//ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ã®ãƒªã‚¹ãƒˆ
 
 GameData gd;
 
 int writed_games=0;
 //--------------------------------------------------------------------------------------
-//w’è‚³‚ê‚½ƒfƒBƒŒƒNƒgƒŠ‚Ì**.csa‚ğ”­Œ©‚µ
-//‚»‚Ìƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX‚ğlist[]‚É•ÛŠÇ‚·‚éB
-//ƒtƒ@ƒCƒ‹‚ÍÄ‹A“I‚ÉŒ©‚Â‚¯‚éiOKj
+//æŒ‡å®šã•ã‚ŒãŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®**.csaã‚’ç™ºè¦‹ã—
+//ãã®ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹ã‚’list[]ã«ä¿ç®¡ã™ã‚‹ã€‚
+//ãƒ•ã‚¡ã‚¤ãƒ«ã¯å†å¸°çš„ã«è¦‹ã¤ã‘ã‚‹ï¼ˆOKï¼‰
 //--------------------------------------------------------------------------------------
 void find_csa(const char *path, std::vector<filepath>& list_) {
 
 	std::cout << "csa file finding";
 
-	//‚Ü‚¸‚ÍƒfƒBƒŒƒNƒgƒŠ“à‚ÅŒ©‚Â‚¯‚½ƒtƒ@ƒCƒ‹‚Ì—ñ‹“
+	//ã¾ãšã¯ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå†…ã§è¦‹ã¤ã‘ãŸãƒ•ã‚¡ã‚¤ãƒ«ã®åˆ—æŒ™
 	int filenum = 0;
-	sys::path p(path); // —ñ‹“‚Ì‹N“_
+	sys::path p(path); // åˆ—æŒ™ã®èµ·ç‚¹
 
-	//Ä‹A“I‚É
-	//QlF@http://qiita.com/episteme/items/0e3c2ee8a8c03780f01e
+	//å†å¸°çš„ã«
+	//å‚è€ƒï¼šã€€http://qiita.com/episteme/items/0e3c2ee8a8c03780f01e
 	std::for_each(sys::recursive_directory_iterator(p), sys::recursive_directory_iterator(),
 		[&](const sys::path& p) {
-		if (sys::is_regular_file(p)) { // ƒtƒ@ƒCƒ‹‚È‚ç...
+		if (sys::is_regular_file(p)) { // ãƒ•ã‚¡ã‚¤ãƒ«ãªã‚‰...
 			//cout << path << p.filename() << endl;
 			if (p.filename().string().find("csa")!=string::npos) {
 				list_.push_back(p.string());
@@ -123,7 +123,7 @@ void find_csa(const char *path, std::vector<filepath>& list_) {
 	cout <<"file number"<< filenum << endl;
 }
 
-//space‚ğ_‚É•Ï‚¦‚é‚½‚ß‚ÌŠÖ”@ispace‚ÍƒZƒpƒŒ[ƒ^[‚È‚Ì‚Å‚±‚¤•ÏŠ·‚·‚éj
+//spaceã‚’_ã«å¤‰ãˆã‚‹ãŸã‚ã®é–¢æ•°ã€€ï¼ˆspaceã¯ã‚»ãƒ‘ãƒ¬ãƒ¼ã‚¿ãƒ¼ãªã®ã§ã“ã†å¤‰æ›ã™ã‚‹ï¼‰
 string space2bar(string str) {
 
 	string rtn = str;
@@ -135,17 +135,17 @@ string space2bar(string str) {
 }
 
 // -------------------------------------------------------------------------------------------
-//  ƒtƒ@ƒCƒ‹‚ÌŠÛ“Ç‚İ
+//  ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸¸èª­ã¿
 // -------------------------------------------------------------------------------------------
 
-// ƒtƒ@ƒCƒ‹‚ğŠÛ“Ç‚İ‚·‚éBƒtƒ@ƒCƒ‹‚ª‘¶İ‚µ‚È‚­‚Æ‚àƒGƒ‰[‚É‚Í‚È‚ç‚È‚¢B‹ós‚ÍƒXƒLƒbƒv‚·‚éB
-//QlF@‚â‚Ë‚¤‚ç‰¤
+// ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸¸èª­ã¿ã™ã‚‹ã€‚ãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ã—ãªãã¨ã‚‚ã‚¨ãƒ©ãƒ¼ã«ã¯ãªã‚‰ãªã„ã€‚ç©ºè¡Œã¯ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ã€‚
+//å‚è€ƒï¼šã€€ã‚„ã­ã†ã‚‰ç‹
 int read_all_lines(std::string filename, std::vector<std::string>& lines)
 {
 	fstream fs(filename, ios::in);
 	if (fs.fail()) {
 		cout << "can't open" << endl;
-		return 1; // “Ç‚İ‚İ¸”s
+		return 1; // èª­ã¿è¾¼ã¿å¤±æ•—
 	}
 
 	while (!fs.fail() && !fs.eof())
@@ -159,18 +159,18 @@ int read_all_lines(std::string filename, std::vector<std::string>& lines)
 	return 0;
 }
 
-//gikouŒ`®‚Å‘‚«o‚µ
+//gikouå½¢å¼ã§æ›¸ãå‡ºã—
 int write_game_info(std::string filename,GameData GD) {
 
 	fstream fs;
-	//ã‘‚«ƒ‚[ƒh‚É‚µ‚È‚¢‚Æ‚¢‚¯‚È‚¢
+	//ä¸Šæ›¸ããƒ¢ãƒ¼ãƒ‰ã«ã—ãªã„ã¨ã„ã‘ãªã„
 	fs.open(filename, ios::app);
 
-	//1s–Ú
-	//<Šû•ˆ”Ô†> <‘Î‹ÇŠJn“ú> <æè–¼> <Œãè–¼> <Ÿ”s(0:ˆø‚«•ª‚¯,1:æèŸ‚¿,2:ŒãèŸ‚¿)> <è”> <Šûí> <íŒ^> (‚í‚©‚ç‚È‚¢‚Æ‚±‚ë‚Í‚·‚×‚Ä0‚É‚µ‚Ä‚ ‚éB)
-	fs << GD.event<<" " << GD.day <<" "<< GD.black_name <<" "<< GD.white_name << " " <<GD.VorD<<" "<<GD.plys<<" 0"<<" 0"<< endl;
-	//2s–Ú
-	// <CSAŒ`®‚Ìw‚µè(1è6•¶š)‚ğˆês‚É•À‚×‚½‚à‚Ì>(‹ós‚Í“ü‚ê‚È‚­‚Ä‚¢‚¢‚Í‚¸‚Å‚ ‚é)
+	//1è¡Œç›®
+	//<æ£‹è­œç•ªå·> <å¯¾å±€é–‹å§‹æ—¥> <å…ˆæ‰‹å> <å¾Œæ‰‹å> <å‹æ•—(0:å¼•ãåˆ†ã‘,1:å…ˆæ‰‹å‹ã¡,2:å¾Œæ‰‹å‹ã¡)> <æ‰‹æ•°> <æ£‹æˆ¦> <æˆ¦å‹> (ã‚ã‹ã‚‰ãªã„ã¨ã“ã‚ã¯ã™ã¹ã¦0ã«ã—ã¦ã‚ã‚‹ã€‚)
+	fs << "0"<<" " << GD.day <<" "<< GD.black_name <<" "<< GD.white_name << " " <<GD.VorD<<" "<<GD.plys<<" 0"<<" 0"<< endl;
+	//2è¡Œç›®
+	// <CSAå½¢å¼ã®æŒ‡ã—æ‰‹(1æ‰‹6æ–‡å­—)ã‚’ä¸€è¡Œã«ä¸¦ã¹ãŸã‚‚ã®>(ç©ºè¡Œã¯å…¥ã‚Œãªãã¦ã„ã„ã¯ãšã§ã‚ã‚‹)
 	for (auto move : GD.moves) {
 		_ASSERT(move.size() == 6|| move.size() == 0);
 		fs << move;
@@ -180,8 +180,8 @@ int write_game_info(std::string filename,GameData GD) {
 }
 
 
-//Šû•ˆ‚ğŠÛ“Ç‚İ‚µ‚Ä‚»‚±‚©‚ç‡‚Ìî•ñ‚ğ“Ç‚İæ‚èAğŒ‚ğ–‚½‚¹‚ÎŠwK—pDB‚Æ‚µ‚Ä‘‚«o‚·B
-//‚±‚ê‚ª‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌŠÌIIIIIIIIIIIIIIIIIIIIIIIIIII
+//æ£‹è­œã‚’ä¸¸èª­ã¿ã—ã¦ãã“ã‹ã‚‰è©¦åˆã®æƒ…å ±ã‚’èª­ã¿å–ã‚Šã€æ¡ä»¶ã‚’æº€ãŸã›ã°å­¦ç¿’ç”¨DBã¨ã—ã¦æ›¸ãå‡ºã™ã€‚
+//ã“ã‚ŒãŒã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®è‚ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼
 int read_game_info(std::vector<filepath>& list_) {
 
 	vector<string> lines;
@@ -200,31 +200,31 @@ int read_game_info(std::vector<filepath>& list_) {
 			read_all_lines(filename, lines)
 			) {
 			cout << "read error" << endl; continue;
-		}//‚±‚±‚ª‚¨‚©‚µ‚¢I
-		 //‚±‚±‚Ü‚Å‚¨‚‹
+		}//ã“ã“ãŒãŠã‹ã—ã„ï¼
+		 //ã“ã“ã¾ã§ãŠï½‹
 
 		for (auto line : lines) {
 
-			//‚±‚±‚ªŠÌIIIIIIIII
+			//ã“ã“ãŒè‚ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼
 
 			if (line.find("N+") != string::npos) { gd.black_name = space2bar(line.substr(2)); }//OK
 			else if (line.find("N-") != string::npos) gd.white_name = space2bar(line.substr(2));//OK
 			else if (line.find("START_TIME") != string::npos)gd.day = space2bar(line.substr(12));//OK
 			else if (line.find("$EVENT") != string::npos)gd.event = space2bar(line.substr(7));//OK
-			//‚Ç‚¤‚â‚Á‚ÄŒã‚ë‚©‚ç•¶š—ñ‚ğ”²‚«o‚·HH
-			//Ql:http://simd.jugem.jp/?eid=131 
-			//­‚µ‰˜‚¢
+			//ã©ã†ã‚„ã£ã¦å¾Œã‚ã‹ã‚‰æ–‡å­—åˆ—ã‚’æŠœãå‡ºã™ï¼Ÿï¼Ÿ
+			//å‚è€ƒ:http://simd.jugem.jp/?eid=131 
+			//å°‘ã—æ±šã„
 			else if (line.find("black_rate") != string::npos) {//OK
 
 				const char *str = line.c_str();
 				int c = ':';
-				const char *ret= strrchr(str, c);//Œã‚ë‚©‚ç’²‚×‚éB
+				const char *ret= strrchr(str, c);//å¾Œã‚ã‹ã‚‰èª¿ã¹ã‚‹ã€‚
 
 				int num = ret - str+1;
 
 				gd.black_rate=std::stoi(line.substr(num));
-				_ASSERT(0<gd.black_rate&&gd.black_rate < 4000);//‚¨‚©‚µ‚È’l‚É‚È‚Á‚Ä‚¢‚È‚¢‚©
-				if (gd.black_rate < 2800) goto NO_WRITE;//rate 3000–¢–‚Å‚ ‚ê‚Î‘‚«o‚³‚È‚¢
+				_ASSERT(0<gd.black_rate&&gd.black_rate < 4000);//ãŠã‹ã—ãªå€¤ã«ãªã£ã¦ã„ãªã„ã‹
+				if (gd.black_rate < 2800) goto NO_WRITE;//rate 3000æœªæº€ã§ã‚ã‚Œã°æ›¸ãå‡ºã•ãªã„
 			}
 			else if (line.find("white_rate") != string::npos) {
 
@@ -235,14 +235,14 @@ int read_game_info(std::vector<filepath>& list_) {
 				int num = ret - str + 1;
 
 				gd.white_rate = std::stoi(line.substr(num));
-				//R‚Í4000ˆÈ‰º‚Å‚ ‚é‚Æ‚µ‚Ä‚¢‚½‚ªelmo‚ªo‚Ä‚«‚½‚Ì‚Å‚±‚ê‚Å‚Í‚¾‚ß‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½(;^_^AƒRƒ“ƒsƒ…[ƒ^«Šû‚Ìi•à‚Í‘‚¢‚È‚Ÿ
-				//‚Ü‚ ‚³‚·‚ª‚É1–œ‚Í’´‚¦‚È‚¢‚¾‚ë‚¤...
+				//Rã¯4000ä»¥ä¸‹ã§ã‚ã‚‹ã¨ã—ã¦ã„ãŸãŒelmoãŒå‡ºã¦ããŸã®ã§ã“ã‚Œã§ã¯ã ã‚ã«ãªã£ã¦ã—ã¾ã£ãŸ(;^_^Aã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿å°†æ£‹ã®é€²æ­©ã¯æ—©ã„ãªã
+				//ã¾ã‚ã•ã™ãŒã«1ä¸‡ã¯è¶…ãˆãªã„ã ã‚ã†...
 				_ASSERT(0<gd.white_rate&&gd.white_rate < 10000);
 				if (gd.white_rate < 2800) goto NO_WRITE;
 			}
 			else if (line.find("summary") != string::npos) {
 
-				//‚±‚ÌğŒ‚Ìê‡‚Í‚¨‚©‚µ‚¢‡‚Å‚ ‚é‚Ì‚Å‘‚«o‚³‚È‚¢
+				//ã“ã®æ¡ä»¶ã®å ´åˆã¯ãŠã‹ã—ã„è©¦åˆã§ã‚ã‚‹ã®ã§æ›¸ãå‡ºã•ãªã„
 				if ((gd.plys<50&&line.find(":toryo:") != string::npos)
 					|| (gd.plys<50 && line.find(":kachi:") != string::npos)
 					|| (gd.plys<50 && line.find(":sennichite:") != string::npos)
@@ -258,7 +258,7 @@ int read_game_info(std::vector<filepath>& list_) {
 
 					const char *str = line.c_str();
 					int c = ':';
-					const char *ret = strrchr(str, c);//ÅŒã‚ÌF‚æ‚èŒã‚ë‚Ì•¶š—ñ
+					const char *ret = strrchr(str, c);//æœ€å¾Œã®ï¼šã‚ˆã‚Šå¾Œã‚ã®æ–‡å­—åˆ—
 
 
 				
@@ -266,10 +266,10 @@ int read_game_info(std::vector<filepath>& list_) {
 					
 					string summary = string(ret);
 					if (summary.find("lose") != string::npos) {
-						gd.VorD = 1;//æè‚ÌŸ‚¿
+						gd.VorD = 1;//å…ˆæ‰‹ã®å‹ã¡
 					}
 					else if (summary.find("win") != string::npos) {
-						gd.VorD = 2;//Œãè‚ÌŸ‚¿
+						gd.VorD = 2;//å¾Œæ‰‹ã®å‹ã¡
 					}
 					else {
 						gd.VorD = 0;
@@ -301,19 +301,19 @@ int read_game_info(std::vector<filepath>& list_) {
 	return 0;
 }
 
-//g‚¢•û
+//ä½¿ã„æ–¹
 void useage() {
 
-	std::cerr << "‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍfloodgateŒ`®‚ÌŠû•ˆ‚ğ‹ZI‚ÌŠwKŒ`®‚É•ÏŠ·‚·‚é‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€‚Å‚·B" << endl
-		<< "æè‚ÆŒãè‚ÌƒŒ[ƒg‚ª‹‚Ü‚Á‚Ä‚¢‚éê‡‚Í‚»‚ê‚ç‚ª3000ˆÈã‚Å‚È‚¯‚ê‚Î•ÏŠ·‚µ‚Ä‘‚«o‚µ‚½‚è‚Í‚µ‚Ü‚¹‚ñ" << endl
-		<< "g—p•û–@" << endl
+	std::cerr << "ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯floodgateå½¢å¼ã®æ£‹è­œã‚’æŠ€å·§ã®å­¦ç¿’å½¢å¼ã«å¤‰æ›ã™ã‚‹ãŸã‚ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã™ã€‚" << endl
+		<< "å…ˆæ‰‹ã¨å¾Œæ‰‹ã®ãƒ¬ãƒ¼ãƒˆãŒæ±‚ã¾ã£ã¦ã„ã‚‹å ´åˆã¯ãã‚Œã‚‰ãŒ3000ä»¥ä¸Šã§ãªã‘ã‚Œã°å¤‰æ›ã—ã¦æ›¸ãå‡ºã—ãŸã‚Šã¯ã—ã¾ã›ã‚“" << endl
+		<< "ä½¿ç”¨æ–¹æ³•" << endl
 		<< "fg2gdb [folder_name]" << endl
-		<< "[foldername]‚Åw’è‚³‚ê‚½ƒtƒHƒ‹ƒ_“à‚Ì*.csaƒtƒ@ƒCƒ‹‚ğÄ‹A“I‚É’T‚µ‚Ü‚·B" << endl;
+		<< "[foldername]ã§æŒ‡å®šã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€å†…ã®*.csaãƒ•ã‚¡ã‚¤ãƒ«ã‚’å†å¸°çš„ã«æ¢ã—ã¾ã™ã€‚" << endl;
 
 }
 
 
-//--------------------------mainŠÖ”II------------------------------------------------------
+//--------------------------mainé–¢æ•°ï¼ï¼------------------------------------------------------
 int main(int argc, char **argv) {
 
 #ifdef TEST
